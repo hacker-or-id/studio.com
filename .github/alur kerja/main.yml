@@ -1,0 +1,33 @@
+# Ini adalah alur kerja dasar untuk membantu Anda memulai Actions
+
+name: studio-ss.com
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the main branch
+pada : linux
+  dorong : https://www.studio-ss.com/
+    branches: [ main ]
+  pull_request: www.studio-ss.com
+    branches: [ main ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+pekerjaan : studio-ss.com
+  # Alur kerja ini berisi satu pekerjaan yang disebutiste "build"
+  membangun : website
+    # Jenis pelari tempat pekerjaan akan dijalankan
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    langkah-langkah : studio-ssw
+      # Check-out repositori Anda di bawah $ GITHUB_WORKSPACE, sehingga pekerjaan Anda dapat mengaksesnya
+      - penggunaan : tindakan / checkout @ v2
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        jalankan : | www.studio-ss.com
+          echo Tambahkan tindakan lain untuk membangun,
+          echo test, and deploy your project.
